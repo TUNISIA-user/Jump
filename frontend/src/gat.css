@@ -1,0 +1,29 @@
+.pointer{
+    position: relative;
+    max-width: max-content; 
+     cursor: pointer;
+}
+
+.pointer::after{
+    content: '';
+    height: 10px;
+    width: 100%;
+    background:linear-gradient( to right ,red,blue);
+    transition: 900ms;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+
+.pointer:hover::after{
+    width: 0;
+  
+}
+
+
+
+.oop{
+     
+    height: 100vh;
+}

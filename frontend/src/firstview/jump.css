@@ -1,0 +1,257 @@
+ 
+
+.containe_Header_jump{
+ width: 100%;
+ height: 100vh;
+ background-image: url("wallper.jpg");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ position: sticky;
+ top: 0;
+}
+
+.containe_Header_jump_black{
+    background-color: #111111;
+    
+    width: 100%;
+    height:auto;
+    position: sticky;
+    top: 0;
+}
+
+
+ 
+    /* background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%) center center / cover;   */
+ 
+
+    .jump_inforamtion{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+          
+        display: flex;
+       flex-direction: column;
+       justify-content: center;
+    
+     
+    }
+  .App_store_button{
+   background-color: #F8F8F8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: grey;
+    font-size:14px;
+    padding: 4px;
+    border-radius: 13px;
+    width:130px;
+    justify-content: center;
+    img{
+        width: 27px ;
+        height: 27px;
+        object-fit: contain;
+    }
+  }
+  .Button_jump{
+  
+    margin-top:200px;
+ 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+  
+  }
+  .logo{
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 10px;
+    img{
+        width: 100px;
+        object-fit: contain;
+    }
+    h1{
+        font-size: 70px
+    }
+  }
+  .connected_users{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2{
+        font-size:80px;
+        font-weight: 140;
+        display: flex;
+
+    }
+  }
+
+  .numbers_matches{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2{
+        font-size:50px;
+
+        font-weight: 300;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 800px) {
+
+
+     
+
+.containe_Header_jump{
+    width: 100%;
+    height: 100vh;
+    /* background-image: url("misurina-sunset.jpg");
+    
+    breathtaking-shot-beautiful-frozen-lake-surrounded-by-snowy-mountains-sunny-day.jpg
+    */
+    background-image: url("ice.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: sticky;
+    top: 0;
+   }
+   
+   .containe_Header_jump_black{
+       background-color: black;
+       width: 100%;
+       height: auto;
+       position: sticky;
+       top: 0;
+   }
+   
+   
+    
+       /* background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%) center center / cover;   */
+    
+   
+       .jump_inforamtion{
+       
+          color: #dfcbc5;
+           width: 100%;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%); 
+             
+           display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-top: 15px;
+       
+       }
+     .App_store_button{
+        
+       background-color: rgb(248, 248, 248);;
+       display: flex;
+       align-items: center;
+       gap: 6px;
+       color: grey;
+       font-size:14px;
+       padding: 4px;
+       border-radius: 13px;
+       width:auto;
+     
+       justify-content: center;
+       img{
+           width: 27px ;
+           height: 27px;
+           object-fit: contain;
+       }
+     }
+     .Button_jump{
+        cursor: pointer;
+       margin-top:300px;
+    
+       width: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin-bottom: 30px;
+       gap: 20px;
+       h4{
+        display: none;
+       }
+     
+     }
+     .logo{
+  
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: row-reverse;
+       gap: 10px;
+       img{
+           width: 80px;
+           object-fit: contain;
+       }
+       h1{
+           font-size: 60px;
+       }
+     }
+     .connected_users{
+      
+        color: #0D1117;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       position: relative;
+       top: 100px;
+       h2{
+           font-size: 34px;
+           font-weight: 140;
+           display: flex;
+
+       }
+     }
+   
+     .numbers_matches{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+
+       position: relative;
+       top: 100px;
+       h2{
+           font-size:34px;
+   
+           font-weight: 300;
+       }
+     }
+
+    
+
+
+  }

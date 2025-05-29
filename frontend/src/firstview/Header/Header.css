@@ -1,0 +1,191 @@
+ .Header__Jump{
+     
+    display: flex;
+    padding: 13px;
+    
+
+ .icon1{
+ 
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  
+    img{
+        width: 50px;
+    }
+ }   
+
+ 
+}
+.First__Jump{
+    display: flex;
+    align-items: center;
+  
+    width: 50%;
+    gap: 50px;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.6;
+    color: rgb(255, 255, 255);
+ }
+
+ .Second__Jump{
+    width: 50%;
+   
+    display: flex;
+     gap: 16px;
+     justify-content: flex-end;
+ 
+.shoping{
+    background-color:  rgb(255, 255, 255);
+    width: 18%;
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 5px;
+      
+    img{
+        width: 30px;
+    };
+  
+}
+.History{
+    background-color:  rgb(255, 255, 255);
+    width: 15%;
+    display: flex;
+    font-size:10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 5px;
+    
+    padding: 3px;
+    img{
+        width: 13px;
+    };
+}
+}
+
+
+.Avtar{
+ 
+display: flex;
+justify-content: center;
+align-items: center;
+width: 10%;  
+  margin-right: 4px;
+ img{
+ 
+    width: 40px;
+    border-radius: 100%;
+    object-fit: contain; 
+}
+ 
+
+}
+/* https://azarlive.com/images/profile/imgProfile@3x.png */
+
+.icon2{
+    
+    
+    h2{
+        color: white;
+        
+    }
+
+}
+ 
+@media screen and (max-width: 1000px) {
+    .Header__Jump{
+        background-color: red;
+        display: flex;
+        padding: 4px;
+     .icon1{
+     
+        object-fit: contain;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      
+        img{
+            width: 50px;
+        }
+     }   
+    
+     
+    }
+    .First__Jump{
+        
+        display: flex;
+        align-items: center;
+      
+        width: 50%;
+        gap: 50px;
+        white-space: nowrap;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: center;
+        cursor: pointer;
+        opacity: 0.6;
+        color: rgb(255, 255, 255);
+     }
+    
+     .Second__Jump{
+        width: 50%;
+  
+        display: flex;
+         gap: 16px;
+         justify-content: flex-end;
+     
+    .shoping{
+        background-color:  rgb(255, 255, 255);
+        width: 35%;
+        display: flex;
+        font-size: 8px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        gap: 1px;
+         
+        img{
+            width: 30px;
+        };
+      
+    }
+    .History{
+        display: none;
+       
+    }
+    }
+    
+    
+    .Avtar{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28%; 
+      margin-right: 4px;
+     img{
+     
+        width: 40px;
+        border-radius: 100%;
+        object-fit: contain; 
+    }
+     
+    
+    }
+
+    .icon2{
+        display: none;
+    }
+  }
+

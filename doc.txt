@@ -1,0 +1,70 @@
+app.put("/check/:id", async (req, res) => {
+    try {
+        const user = await User.findByIdAndUpdate(req.params.id,
+            {chatWithAdmin1:true},
+            {new : true}
+        );
+        if (!user) {
+            return res.status(404).json({ message: "This user does not exist" });
+        }
+        // inside  the user their chalo bame chatWithadmin i wanna chang this ture 
+        res.status(200).json(user);
+    } catch (error) {
+        console.log(`This error caused: ${error}`);
+        res.status(500).json({ message: error });
+    }
+});
+
+this for acess messags
+
+app.post("/get/access/message/:id",async(req,res)=>{
+
+try{
+
+    const { userId } = req.body; 
+ 
+    let isChat = await ChatTalking.findOne({
+        $and: [
+            { users: { $elemMatch: { $eq: req.params.id } } }, 
+            { users: { $elemMatch: { $eq: userId } } }  
+        ]
+    });
+ 
+    res.status(200).json(isChat)
+
+
+}catch(eroor){
+    res.status(404).json({message : eroor})
+}
+
+})
+
+
+---------this for delte messages
+
+app.post("/delete/access/message/:id", async (req, res) => {
+    try {
+      const { userId, messageId } = req.body;
+      
+                                           
+      // Use $pull to directly attempt to remove the message from the chat
+      const result = await ChatTalking.updateOne(
+        { 
+          users: { $all: [req.params.id, userId] }  // Ensure both users are part of the chat
+        },
+        { $pull: { messages: { _id: messageId } } }
+      );
+  
+      if (result.modifiedCount > 0) {
+        res.status(200).json("Message deleted successfully");
+      } else {
+        res.status(404).json("Chat or message not found");
+      }
+    } catch (error) {
+      res.status(500).json({ message: error.message });
+    }
+  });
+
+
+
+should be do function to detect if the user  close tab or do refresh in his web site for     choising the best solution

@@ -1,0 +1,77 @@
+import React, { useState, useEffect } from 'react';
+import "./gat.css";
+
+const images = [
+  "./beautiful-scenery-dry-tree-green-mountain-covered-with-fog.jpg",  // Red placeholder
+  "./brown-wooden-dock.jpg",  // Red placeholder
+ "./tree-bubble.jpg",
+ "./arbreScreen.jpg"
+ 
+];
+
+const Test = () => {
+  const [imageIndex, setImageIndex] = useState(0);
+  const [imageSrc, setImageSrc] = useState(images[imageIndex]);
+  const [colors, setColors] = useState({ color1: '', color2: '' });
+
+ 
+
+  useEffect(() => {
+    setImageSrc(images[imageIndex]);
+  }, [imageIndex]);
+ 
+
+  useEffect(() => {
+    if (imageSrc) {
+      const img = new Image();
+      
+      img.src = imageSrc;
+      img.crossOrigin = "Anonymous";
+      img.onload = () => detectGradientBackground(img);
+    }
+  }, [imageSrc]);
+
+  const detectGradientBackground = (img) => {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    ctx.drawImage(img, 0, 0);
+
+    const color1 = getAverageColor(ctx, 0, 0, 10, 10); // Top-left
+    const color2 = getAverageColor(ctx, 0, canvas.height - 10, 10, 10); // Bottom-left
+
+    setColors({ color1, color2 });
+ 
+  };
+
+  const getAverageColor = (ctx, x, y, w, h) => {
+    let r = 0, g = 0, b = 0;
+    const imageData = ctx.getImageData(x, y, w, h).data;
+    const pixelCount = w * h;
+
+    for (let i = 0; i < imageData.length; i += 4) {
+      r += imageData[i];
+      g += imageData[i + 1];
+      b += imageData[i + 2];
+    }
+
+    r = Math.round(r / pixelCount);
+    g = Math.round(g / pixelCount);
+    b = Math.round(b / pixelCount);
+
+    return `rgb(${r}, ${g}, ${b})`;
+  };
+
+  return (
+    <div style={{ textAlign: 'center', color: 'white', fontFamily: 'Arial, sans-serif' ,background: `linear-gradient(to bottom, ${colors.color1}, ${colors.color2})` }} className='oop'>
+      <button onClick={()=>setImageIndex((prev)=>(prev+1)%images.length) } >Change   Color {imageIndex}</button>
+    <br/>
+      <img src={imageSrc} alt="Dynamic" style={{ maxWidth: '80%', maxHeight: '60vh', margin: '10px 0' }} />
+      
+    </div>
+  );
+};
+
+export default Test;

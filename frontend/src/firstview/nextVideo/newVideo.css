@@ -1,0 +1,219 @@
+.next_video_jump{
+
+    width:100%;
+    height:800px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper_jump_section{
+    width: 100%;
+ 
+    height:100%;
+    display: flex;
+}
+
+.first_side{
+    width: 50%;
+    height: 100%;
+    
+}
+.seconde_side{
+    width: 50%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.container__inside__card{
+    width:90%;
+    height: 400px;
+ 
+.video_chat{
+    color: white;
+    font-size: 33px;
+    font-weight: bold;
+  
+}
+.meeting{
+    
+     color: grey;
+     width: 60%;
+     font-size: 30px;
+     font-weight: 300;
+
+}
+
+.description{
+    margin-top: 6px;
+    color: rgb(94, 92, 92);
+    font-size: 23px;
+    font-weight: 200;
+}
+.button_start_video_chat{
+   
+    margin-top: 10px;
+    button{
+        padding: 10px;
+        border: none;
+        background-color: rgb(0, 246, 157);
+        border-radius: 10px;
+        font-size: 10px;
+        font-weight: bold;
+        color: black;
+    }
+    button:hover{
+        cursor: pointer;
+        background-color: rgb(31, 180, 125);
+    }
+}
+
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 999px) {
+ 
+    .next_video_jump{
+        background-color: rgb(192, 192, 192);
+          width:100%;
+          height:auto;
+          margin-top: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      
+      .swiper_jump_section{
+          width: 100%;
+          background-color: #111111;
+          height:100%;
+          display: flex;
+          flex-direction: column;
+      }
+      
+      .first_side{
+          width: 100%;
+          height: 100%;
+          
+          
+      }
+      .seconde_side{
+          width: 100%;
+          height: 100%;
+         
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      
+      
+      
+      
+      .container__inside__card{
+          width:100%;
+          height: auto;
+          background-color: #111111;
+          padding: 13px;
+      .video_chat{
+          color: white;
+          font-size: 24px;
+          font-weight: bold;
+        
+      }
+      .meeting{
+          
+           color: rgb(202, 197, 197);
+           width: 100%;
+           font-size: 30px;
+           font-weight: 300;
+      
+      }
+      
+      .description{
+          margin-top: 6px;
+          color:rgb(101, 98, 98);
+          font-size: 23px;
+          font-weight: 200;
+      }
+      .button_start_video_chat{
+        
+          margin-top: 10px;
+         width: 100%;
+         display: flex;
+         justify-content: center;
+          button{
+              padding: 10px;
+              border: none;
+              background-color: rgb(0, 246, 157);
+              border-radius: 10px;
+              font-size: 10px;
+              font-weight: bold;
+              color: black;
+          }
+          button:hover{
+              cursor: pointer;
+              background-color: rgb(31, 180, 125);
+          }
+      }
+      
+      
+       
+      }
+  }
+ /* this sectio only for the phone 
+   */
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

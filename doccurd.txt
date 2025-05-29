@@ -1,0 +1,95 @@
+if he do refrech should be delte his id and if i dont see id  should be return to hompage
+
+if he still online and dont use the connection should be gerneated other id from the user and send it to it 
+
+change id users
+
+
+
+
+
+const UserSchema = new mongoose.Schema({ID: String}, { timestamps: true }); / 
+
+
+
+Test.jsx
+
+
+import React, { useEffect, useRef, useState }  from 'react';
+import axios from "axios"
+import { useNavigate } from 'react-router-dom';
+import CircularProgress from "@mui/material/CircularProgress";
+import { useGlobalContext } from "./Store/ContextProvider";
+
+const Test = () => {
+  const Nav = useNavigate()
+  let email= useRef()
+  let password = useRef()
+  const [data,setdata] = useState("")
+  const [loading,setlodaing] = useState(false)
+ 
+  
+  const {socket} = useGlobalContext()
+
+ const auth  =async ()=>{
+  setlodaing(true)
+try{
+  const {data} =  await axios.post("http://localhost:5000/auth",{
+  
+      "email":email.current.value,
+      "password":password.current.value
+ 
+  })
+  console.log(data)
+  
+  setlodaing(false)
+  // Nav("/videoChat")
+ if(data){
+  socket.emit("auth__get__user_from_frontned",{uniqueSocket:localStorage.getItem("SOCKET__ID__KEY"),Buffer : data})
+ }
+}catch(eroor){
+  console.log("this eroor was in ",eroor)
+  setlodaing(false)
+}
+ }
+ 
+ useEffect(() => {
+  const interval = setInterval(() => {
+   
+    setdata(localStorage.getItem("SOCKET__ID__KEY"));
+  }, 800);
+
+  return () => clearInterval(interval); // Cleanup the interval when component unmounts
+}, []); // Runs once when the component mounts
+
+ 
+ useEffect(()=>{
+  socket.on("list__of__the__author__online__in_users__connected",(buffer)=>{
+    console.log(buffer)
+  })
+ },[socket])
+
+  return (
+    <div>
+ <p style={{color:"red",display:"flex",gap:"10px"}}  >  <span style={{color:"black"}}>This Key </span> {data}</p>
+       
+
+       <input type='text' ref={email}/>
+       <br/>       <br/>
+       <input type='text' ref={password}/>
+       <br/>       <br/>
+
+
+   
+       {loading ?  <CircularProgress size={20} color="primary" />:    <button onClick={()=>auth()}> Next</button>}
+ <hr/>
+
+  
+    </div>
+  );
+};
+
+export default Test;
+
+
+

@@ -1,0 +1,125 @@
+.Description__jump{
+    
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inside__jump{
+    width: 100%;
+    height: 100%;
+ 
+    text-align: center;
+    .liveStream h1{
+        color: white;
+        font-weight: bold;
+        font-size: 60px;
+    }
+    .withJump {
+         margin-left: auto;
+         margin-right: auto;
+        width: 60%;
+ 
+         color: white;
+         h1{
+            font-weight: 300;
+         }
+    }
+    .moreDesc{
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+ 
+        color: grey;
+        font-weight: 400;
+
+    }
+    .buttonstartLive{
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        margin-top: 20px;
+ 
+        display: flex;
+        justify-content: flex-start;
+        button{
+            border: none;
+            padding: 10px;
+            border-radius: 20px;
+            background-color:#00F69D ;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color:#24be86 ;
+        }
+    }
+}
+
+
+
+
+@media only screen and (max-width: 800px) {
+    .Description__jump{
+      
+        width: 100%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #111111;
+    }
+    
+    .inside__jump{
+        width: 100%;
+        height: 100%;
+    
+        text-align: center;
+        .liveStream h1{
+            color: white;
+            font-weight: bold;
+            font-size: 34px;
+        }
+        .withJump {
+             margin-left: auto;
+             margin-right: auto;
+            width: 100%;
+        
+             color: white;
+             h1{
+                font-weight: 300;
+             }
+        }
+        .moreDesc{
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+      
+            color: grey;
+            font-weight: 400;
+    
+        }
+        .buttonstartLive{
+       
+           margin-top: 7px;
+            width: 100%;
+          
+            display: flex;
+            justify-content: center;
+            button{
+                border: none;
+                padding: 10px;
+                border-radius: 20px;
+                background-color:#00F69D ;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color:#24be86 ;
+            }
+        }
+    }
+    
+    
+  }
